@@ -391,12 +391,52 @@ Scripting Linux Server Functions for Automation
 
 This screenshot shows I was using some command that required sudo because i was creating file as the user “Giulio” instead of “Ubuntu”. Using sudo allowed me gain temporary privileges to access the directory.
 
-This is a backup script, it automates copying and zipping files based on current date.
+This is a backup script, it automates copying and zipping files based on current date. 
 
+i couldnt upload any photo, an error message pop up (something went really wrong, and we can't process that file.Try again)
+Im assuming i upload too many images.
 
+[Image]
+This screenshot shows the output of running testscript.sh that automate copying and zipping files.
 
+[Image}
+Sudo mv /home/ubuntu/testscript.sh /usr/bin/testscript, it moved the testscript.sh to /usr/bin. This allows the folder to be able to run from any directory.
+Sudo chown, I gave the user “Giulio” to be owner of the file
 
+[Image]
+Cd /tmp, I ran this to change directory to /tmp to test out the whether testscript.sh works on any directory.
 
+[Image]
+Ran the script and it shows output while being at /tmp directory.
+•	- Schedule cron to run the script hourly: edit `/etc/crontab`.
 
+[Image]
+•	0 * * * * = Minute 0 of every hour, every day of every month
+•	/usr/bin/testscript = Full path to my backup script
+Configured it to schedule the script to run hourly, The script will execute at the every hour.
 
+[Image]
+This command  send backups files automatically to azure cloud server.
+
+[image]
+Screenshots show the script ran successfully and copy the files to the cloud, but system prompt for fingerprint verification to ask whether I trust the cloud server connection.
+
+9. Additional Server Service: MariaDB
+[Image]
+I chose MariaDB as my additional server service, I installed it and secure it with the command mysql_secure_installation. I remove anonymous users, disallow root login, remove test databases and access. I learned the importance of installation verification, managing service, opting for security practices such as least privilege.
+Disabled remote root access, it prevents attacker from connecting externally
+Removed anonymous users, it reduced pathways that for attackers to get unauthorized access or perform system exploits.
+
+10. Problems Encountered and Solutions
+
+	Problem	I Solved it by
+1	While doing lab 1a-2, I encountered a memory problem where I did not have enough space to install libreoffice and my I couldn’t run sudo apt update.	Manager>Tools>Media>Ubuntu.vdi>Attributes tab>Slide size bar from original 10GB-20GB>Turn on my VM>Disk>Slide the partition 
+2	I tried to do make my script for lab 2b-2a but I found it difficult and ran into bunch of errors.	I decided to use the script sample found on SharePoint to see the output, but I ran into some syntax error.
+
+11. Industry Relevance
+These skills are related to being System admin from installing Linux server, update and installing Apache, creating groups, managing permission as a job and much more. The labs that relate to being DevOps or cloud engineers are the labs that taught me how to create a cloud server on Azure or AWS, writing bash scripts, automating with cron jobs. Learning these labs builds me some confidence potentially working as one of the roles.
+
+12. Final Reflection
+
+This was a challenging learning experience, I had to manage between all the labs and learn the skills required to finish them, 2 weeks is not enough to learn and master all the skills. I improve technical skills in Linux, managing security and troubleshooting technical problems. Next new project, I would set small goals every day instead of rushing everything in the last week.
 
