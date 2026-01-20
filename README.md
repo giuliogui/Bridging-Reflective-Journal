@@ -1,4 +1,5 @@
 1. Introduction
+
 This is my reflective journal, it will document my introduction to Server Environments and Architecture module learning experience. It will cover sections of the hand on experience Linux setup, command, scripting, network, security, automation and more. I used Ubuntu in both my Azure cloud environment and virtualization machine, downloading and configuration services such as Apache, securing my system with port 80 and 443 and wrote basic bash script. Even though Some of the labs are difficult such as scripting and writing bash, i still challenge myself to finish them or find alternative ways to finish them. This module has lay a sturdy foundation in experiencing as real IT role.
 
 2. Linux Environment Setup
